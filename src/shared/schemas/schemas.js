@@ -22,5 +22,17 @@ export const schemas = {
                 .email('Niepoprawny format email')
                 .required('Email jest wymagany'),
         })
+    },
+    single : {
+        text : name => {
+            switch (name) {
+                case 'email' : return  yup.object({
+                    [name] : yup.string()
+                        .required('Pole jest wymagane')
+                        .email('Pole musi być formatu email')
+                        .test('len', 'Maksymalnie 100 znaków', val => val.length <= 100)});
+                default: break;
+            }
+        }
     }
 }
