@@ -4,23 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import {ServerCommunicator} from "../../../services/ServerCommunicator";
 import {useContext, useState} from "react";
 import {OverlayContext} from "../../../shared/context/overlay/OverlayContext";
-
-const schema = yup.object({
-    login: yup.string()
-        .required('Login jest wymagany'),
-    password: yup.string()
-        .required('Hasło jest wymagane')
-        .matches(/[0-9]/, 'Hasło musi zawierać cyfrę')
-        .matches(/[a-z]/, 'Hasło musi zawierać małą literę')
-        .matches(/[A-Z]/, 'Hasło musi zawierać dużą literę')
-        .matches(/\W/, 'Hasło musi zawierać znak specjalny'),
-    password2: yup.string()
-        .required('Pole wymagane')
-        .oneOf([yup.ref('password'), null], 'Hasła muszą być takie same'),
-    email: yup.string()
-        .email('Niepoprawny format email')
-        .required('Email jest wymagany'),
-})
+import {schemas} from "../../../shared/schemas/schemas";
 
 const RegisterForm = () => {
     const { setType, clearOverlay } = useContext(OverlayContext);
@@ -34,7 +18,7 @@ const RegisterForm = () => {
         setError,
 
     } = useForm({
-        resolver: yupResolver(schema)
+        resolver: yupResolver(schemas.auth.registerForm)
     });
 
     const onSubmit = (data) => {

@@ -5,17 +5,14 @@ import * as yup from "yup";
 import {useContext, useState} from "react";
 import {OverlayContext} from "../../../shared/context/overlay/OverlayContext";
 import {useNavigate} from "react-router-dom";
+import {schemas} from "../../../shared/schemas/schemas";
 
-const schema = yup.object({
-    login: yup.string().required('Login jest wymagany'),
-    password: yup.string().required('Hasło jest wymagane')
-})
 const LoginForm = () => {
     const { register,
         handleSubmit,
         setError,
         formState: {errors}} = useForm({
-        resolver: yupResolver(schema)
+        resolver: yupResolver(schemas.auth.loginForm)
     });
     const navigate = useNavigate();
 
