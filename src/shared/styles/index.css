@@ -1,0 +1,35 @@
+html {
+    /*scrollbar-gutter: stable;*/
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100vw;
+}
+body {
+    height: 100%;
+    margin: 0;
+    color: var(--pallete-dark);
+    background-color: var(--pallete-light);
+    font-family: 'Roboto', serif;
+}
+
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1;
+}
+
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 0.815rem;
+    background-color: var(--pallete-violet-0_6);
+}
