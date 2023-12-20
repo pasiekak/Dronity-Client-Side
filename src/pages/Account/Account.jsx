@@ -28,7 +28,7 @@ const Account = () => {
                     <>
                         <AccountProfile userDetails={userDetails}/>
                         <AccountNavigation userDetails={userDetails}/>
-                        <Outlet context={userDetails}/>
+                        <Outlet context={[userDetails, setUserDetails]}/>
                     </>
             }
         </div>
