@@ -1,48 +1,54 @@
 /*Links style*/
-a, .animated-hover {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--pallete-dark);
-    background-image: linear-gradient(
-            to right,
-            var(--pallete-violet) 50%,
-            var(--pallete-dark) 50%
-    );
-    background-size: 200% 100%;
-    background-position: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+a,
+.animated-hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--pallete-dark);
+  background-image: linear-gradient(
+    to right,
+    var(--pallete-violet) 50%,
+    var(--pallete-dark) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-a:hover, .animated-hover:hover {
-    background-position: 0;
+a:hover,
+.animated-hover:hover {
+  background-position: 0;
 }
 
 /*All types of forms*/
-input[type=text], input[type=password] {
-    border: 0;
-    outline: none;
-    text-align: center;
-    line-height: 1.5rem;
-    font-size: 18px;
-    border-radius: 3px;
+input[type="text"],
+input[type="password"],
+textarea,
+input[type="number"] {
+  border: 0;
+  outline: none;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 18px;
+  border-radius: 3px;
 }
-input[type=text]:focus,
-input[type=password]:focus {
-    box-shadow: 0 0 2px 2px var(--pallete-violet-0_4)
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  box-shadow: 0 0 2px 2px var(--pallete-violet-0_4);
 }
-input[type=submit] {
-    border: 0;
-    line-height: 1.5rem;
-    border-radius: 3px;
+input[type="submit"] {
+  border: 0;
+  line-height: 1.5rem;
+  border-radius: 3px;
 }
-input[type=submit]:hover:active {
-    box-shadow: 0 0 1px 1px rgba(0,0,0,0.4);
+input[type="submit"]:hover:active {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4);
 }
-input[type=submit]:hover {
-    box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
+input[type="submit"]:hover {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 }
