@@ -1,0 +1,129 @@
+.commission {
+    flex: 1;
+    background: var(--pallete-light);
+    border-radius: 2px;
+    padding: 1rem;
+}
+
+.commission .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.commission .important-details {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.5fr 0.5fr;
+}
+
+.commission .important-details span.completion {
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.commission .important-details span.completed {
+    background: limegreen;
+}
+
+.commission .important-details span.not-completed {
+    background: orange;
+}
+
+.commission .details {
+    display: grid;
+    transition: all 1s ease-out;
+    grid-template-rows: 0fr;
+    margin-block: 1rem;
+}
+
+.commission .details .inner {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.commission .details.closed {
+    margin: 0;
+}
+
+.commission .details.open {
+    grid-template-rows: 1fr;
+}
+
+.commission .svg-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.commission .svg-wrapper .svg-circle {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: var(--pallete-dark-0_2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commission .svg-wrapper .svg-circle:hover {
+    background: var(--pallete-dark-0_4);
+}
+
+.commission .details + .svg-wrapper svg {
+    transition: 1s linear;
+}
+
+.commission .details.open + .svg-wrapper svg {
+    rotate: 180deg;
+}
+
+.commission .details table {
+    width: 100%;
+    border-top: 1px solid var(--pallete-dark-0_4);
+    border-spacing: 5px;
+}
+
+.commission .details table td {
+    text-align: center;
+}
+
+.commission .details .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.commission .details .commission-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.commission .details .commission-details .title {
+    align-self: center;
+}
+
+.commission .details .commission-details .line {
+    width: 95%;
+    height: 1px;
+    margin-block: 7px;
+    background: var(--pallete-dark-0_4);
+    align-self: center;
+}
+
+.commission .details .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.commission .details .actions .trash-can {
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+}
+
+.commission .details .actions .trash-can:hover {
+    fill: var(--pallete-violet);
+}
