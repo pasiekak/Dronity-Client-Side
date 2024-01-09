@@ -1,0 +1,35 @@
+.pagination-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination-panel .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.pagination-panel .caret {
+    fill: var(--pallete-dark);
+    height: 32px;
+    width: 32px;
+}
+
+.pagination-panel .dot {
+    background: var(--pallete-dark);
+}
+
+.pagination-panel .dot:hover {
+    background: var(--pallete-violet-0_6);
+}
+
+.pagination-panel .caret:hover {
+    fill: var(--pallete-violet);
+}
+
+.pagination-panel .dot.selected {
+    background: var(--pallete-violet);
+}
