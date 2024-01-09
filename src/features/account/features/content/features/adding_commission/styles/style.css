@@ -1,0 +1,52 @@
+.add-commission {
+    flex: 1;
+    border-radius: 2px;
+}
+
+.add-commission form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-commission .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-commission .field label {
+    font-weight: bold;
+}
+
+.add-commission .field textarea, .add-commission .field input {
+    text-align: left;
+    width: 100%;
+}
+
+.add-commission .field textarea {
+    resize: vertical;
+    min-height: 2rem;
+}
+
+.add-commission .field label, .add-commission .field .error {
+    margin-block: 8px
+}
+
+.add-commission .field .error {
+    min-height: 19px;
+}
+
+.add-commission .dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.add-commission .success-message {
+    color: darkgreen;
+}
+
+.add-commission button[type="submit"] {
+    align-self: center;
+    width: fit-content;
+}
