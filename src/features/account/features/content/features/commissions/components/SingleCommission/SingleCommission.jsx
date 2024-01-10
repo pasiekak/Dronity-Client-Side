@@ -6,10 +6,13 @@ import AuthorDetails from "./AuthorDetails";
 import OtherDetails from "./OtherDetails";
 import ContractorDetails from "./ContractorDetails";
 import DeleteCommission from "../../features/deleting/DeleteCommission";
+import EditCommission from "../../features/editing/components/EditCommission";
+import EditCommissionForm from "../../features/editing/components/EditCommissionForm";
 
 const SingleCommission = ({id, type}) => {
     const [commission, setCommission] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [showEditForm, setShowEditForm] = useState(false);
     const [detailsOpen, setDetailsOpen] = useState(false);
     useEffect(() => {
         setCommission(null)
@@ -63,18 +66,33 @@ const SingleCommission = ({id, type}) => {
                     </div>
                     <div className={`details ${detailsOpen ? "open" : "closed"}`}>
                         <div className="inner">
-                            {type === "operator" && (
-                                <AuthorDetails author={commission?.author}/>
-                            )}
-                            {type === "client" && (
-                                <ContractorDetails contractor={commission?.contractor}/>
-                            )}
+                            {showEditForm ?
+                                <>
+                                    <EditCommissionForm
+                                        hideForm={() => setShowEditForm(false)}
+                                        details={commission.details}
+                                        set={setCommission}
+                                    />
+                                </>
+                                :
+                                <>
+                                    {type === "operator" && (
+                                        <AuthorDetails author={commission?.author}/>
+                                    )}
+                                    {type === "client" && (
+                                        <ContractorDetails contractor={commission?.contractor}/>
+                                    )}
 
-                            <OtherDetails details={commission?.details}/>
-                            <div className={'actions'}>
-                                {commission?.contractor === undefined &&
-                                    <DeleteCommission id={id}/>}
-                            </div>
+                                    <OtherDetails details={commission?.details}/>
+                                    <div className={'actions'}>
+                                        {commission?.contractor === undefined &&
+                                            <>
+                                                <DeleteCommission id={id}/>
+                                                <EditCommission onClick={() => setShowEditForm(true)}/>
+                                            </>}
+                                    </div>
+                                </>
+                            }
                         </div>
                     </div>
                     <div className="svg-wrapper">

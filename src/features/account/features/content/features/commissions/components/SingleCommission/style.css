@@ -115,15 +115,16 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 2rem;
 }
 
-.commission .details .actions .trash-can {
+.commission .details .actions .trash-can, .commission .details .actions .pencil-edit {
     width: 24px;
     height: 24px;
 
     cursor: pointer;
 }
 
-.commission .details .actions .trash-can:hover {
+.commission .details .actions .trash-can:hover, .commission .details .actions .pencil-edit:hover {
     fill: var(--pallete-violet);
 }
