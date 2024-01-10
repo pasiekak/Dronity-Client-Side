@@ -61,6 +61,11 @@ input[type="submit"]:hover {
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+/* Textarea, date input font fix */
+textarea, input[type="date"] {
+    font-family: "Roboto", serif;
+}
+
 /* Violet button */
 .violet_button {
     padding: 8px 12px;
