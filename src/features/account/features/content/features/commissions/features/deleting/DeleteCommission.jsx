@@ -15,7 +15,6 @@ const DeleteCommission = ({id}) => {
                     const temp = JSON.parse(JSON.stringify(prev));
                     const newCommissions = temp.Client.AuthorCommissions.filter(com => com.id !== id);
                     temp.Client.AuthorCommissions = [...newCommissions];
-                    console.log(temp)
                     return temp;
                 })
             }

@@ -1,8 +1,8 @@
 import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import schema from "../schema/schema";
 import {ServerCommunicator} from "../../../../../../../shared/services/ServerCommunicator";
 import {useState} from "react";
+import {schemas} from "../../../../../../../shared/schemas/schemas";
 
 const NewCommissionForm = ({handleAddCommission}) => {
     const [success, setSuccess] = useState(false);
@@ -13,15 +13,15 @@ const NewCommissionForm = ({handleAddCommission}) => {
         reset,
         formState: {errors}
     } = useForm({
-        resolver: yupResolver(schema),
+        resolver: yupResolver(schemas.others.commission_add_or_edit),
+
     });
 
     const onSubmit = (data) => {
         ServerCommunicator.handleRequest('post', '/api/commissions', data).then(res => {
-            console.log(res)
             if (res.success) {
-                handleAddCommission(res.data.created.id);
-                setNewCommissionID(res.data.created.id);
+                handleAddCommission(res.data.id);
+                setNewCommissionID(res.data.id);
                 setSuccess(true);
                 reset();
             } else {

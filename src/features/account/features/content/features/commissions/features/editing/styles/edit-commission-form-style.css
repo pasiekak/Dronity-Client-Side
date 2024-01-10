@@ -1,0 +1,33 @@
+.commission-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commission-edit-form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-inline: 1rem;
+}
+
+.commission-edit-form .field input, .commission-edit-form .field textarea {
+    width: 90%;
+    text-align: left;
+}
+
+.commission-edit-form .field textarea {
+    resize: vertical;
+    min-height: 2rem;
+}
+
+.commission-edit-form .buttons, .commission-edit-form .dates {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.commission-edit-form .success-message {
+    color: darkgreen;
+}
