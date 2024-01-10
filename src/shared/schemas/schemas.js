@@ -1,5 +1,7 @@
 import * as yup from "yup";
 
+const dayBefore = new Date(Date.now() - 24 * 60 * 60 * 1000);
+
 export const schemas = {
     auth: {
         loginForm: yup.object({
@@ -11,6 +13,7 @@ export const schemas = {
             password: yup
                 .string()
                 .required("Hasło jest wymagane.")
+                .test('len', "Musi mieć minimum 8 znaków", val => val.length >= 8)
                 .matches(/[0-9]/, "Hasło musi zawierać cyfrę.")
                 .matches(/[a-z]/, "Hasło musi zawierać małą literę.")
                 .matches(/[A-Z]/, "Hasło musi zawierać dużą literę.")
@@ -102,4 +105,21 @@ export const schemas = {
             }),
         },
     },
+    others: {}
 };
+
+schemas.others.commission_add_or_edit = yup.object({
+    title: schemas.single.text.title.fields.title,
+    description: schemas.single.textarea.description.fields.description,
+    city: schemas.single.text.city.fields.city,
+    start_date: yup.date()
+        .nullable()
+        .transform((curr, orig) => orig === '' ? null : curr)
+        .required('To pole jest wymagane.').min(dayBefore, 'Taki dzień już był.'),
+    end_date: yup.date()
+        .nullable()
+        .transform((curr, orig) => orig === '' ? null : curr)
+        .required('To pole jest wymagane.').min(yup.ref('start_date'), 'Data zakończenia zlecenia musi być po dacie rozpoczęcia.'),
+    suggested_payment: schemas.single.number.payment.fields.payment
+
+})
