@@ -16,35 +16,42 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--pallete-second-light-0_8);
+    background-color: var(--pallete-color-2-brighter);
     border-radius: 10px;
 
     margin-block: 2rem;
     max-width: 35%;
 }
+
 .auth h1 {
     word-wrap: anywhere;
 }
+
 .auth form, .auth .activation {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 5px;
 }
+
 .auth .activation {
     justify-content: center;
     align-items: center;
 }
+
 .auth form .error {
     min-height: 1rem;
     margin-block: 2px;
 }
+
 .auth form label {
     font-weight: bold;
 }
+
 .auth .email-message {
     font-weight: bold;
 }
+
 .auth .re-send {
     font-weight: bold;
     cursor: pointer;
