@@ -1,0 +1,32 @@
+.account-commissions .single-application {
+    display: grid;
+    grid-template-columns: 1fr 1fr 15ch 0.75fr 0.1fr 0.5fr;
+    grid-template-rows: minmax(80px, min-content);
+    align-items: center;
+    border-radius: 5px;
+
+    border: 1px solid var(--pallete-color-3-opacity-0_2)
+
+}
+
+.account-commissions .single-application.loading {
+    grid-template-columns: 1fr;
+}
+
+.account-commissions .single-application .loader {
+    align-self: center;
+    justify-self: center;
+    height: 34px;
+    width: auto;
+}
+
+.account-commissions .single-application .field {
+    padding: 5px;
+}
+
+.account-commissions .single-application .field.application-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
