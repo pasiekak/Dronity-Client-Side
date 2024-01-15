@@ -3,7 +3,7 @@ import {useState} from "react";
 import "./dropdown.css";
 import CaretDownSVG from "../../assets/media/svg/CaretSVG/down/CaretDownSVG";
 
-const Dropdown = ({trigger, itemList}) => {
+const Dropdown = ({trigger, itemList, component}) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -17,7 +17,7 @@ const Dropdown = ({trigger, itemList}) => {
             </div>
             <ul className={`menu${open ? " open" : ""}`}>
                 <div className="menu-wrapper">
-                    {itemList.map((item, index) => (
+                    {itemList && itemList.map((item, index) => (
                         <li key={index}>
                             <button
                                 onClick={() => {
@@ -29,6 +29,7 @@ const Dropdown = ({trigger, itemList}) => {
                             </button>
                         </li>
                     ))}
+                    {component && component}
                 </div>
             </ul>
         </div>
