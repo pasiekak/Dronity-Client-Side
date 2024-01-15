@@ -8,6 +8,10 @@ export const ServerCommunicator = {
                 method, url, data
             })
             response = res.data
+            if (res?.statusText === "No Content" && method === "delete" && res?.status === 204) response = {
+                success: true,
+                message: "Pomyślnie usunięto"
+            };
         } catch (err) {
             response = ServerCommunicator.handleError(err);
         }
