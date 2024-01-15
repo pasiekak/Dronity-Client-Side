@@ -19,20 +19,17 @@ const LoginForm = () => {
 
     const [formDisabled, setFormDisabled] = useState(false);
 
-    const {setType, setMessage, clearOverlay} = useContext(OverlayContext);
+    const {setType, clearOverlay} = useContext(OverlayContext);
 
     const onSubmit = (data) => {
         setType("loading");
         setFormDisabled(true);
         ServerCommunicator.handleRequest("post", "/login", data).then((res) => {
             if (!res.success) {
-                console.log(res)
                 setFormDisabled(false);
                 setError("password", {message: res.message});
                 clearOverlay();
             } else {
-                setMessage("Zalogowano pomyślnie, zaraz nastąpi przekierowanie.");
-                setType("message");
                 setTimeout(() => {
                     clearOverlay();
                     navigate("/");
