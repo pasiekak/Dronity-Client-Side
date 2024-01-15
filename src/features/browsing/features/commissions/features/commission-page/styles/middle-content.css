@@ -1,0 +1,63 @@
+.commission-page .middle-content {
+    flex: 1;
+    background-color: var(--pallete-color-5);
+    display: flex;
+    overflow: hidden;
+}
+
+.commission-page .middle-content .all {
+    flex: 1;
+    padding-inline: 1rem;
+}
+
+.commission-page .middle-content .all .description {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.commission-page .middle-content .all .full-name .full-name-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.commission-page .middle-content .all .full-name {
+    display: inline-block;
+    height: 50px;
+    width: fit-content;
+    padding-right: 1rem;
+    position: relative;
+    background-color: var(--pallete-color-1);
+    border-radius: 0 0 1rem 0;
+    font-size: 22px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.commission-page .middle-content .all .full-name:after {
+    position: absolute;
+    content: '';
+
+    top: 0;
+    left: 100%;
+    border-radius: 1rem 0 0 0;
+
+    height: 1rem;
+    width: auto;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    box-shadow: -10px -10px 0 10px var(--pallete-color-1);
+}
+
+.commission-page .middle-content .all .full-name:before {
+    position: absolute;
+    content: '';
+
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 1rem;
+    background-color: var(--pallete-color-1);
+}

@@ -1,0 +1,18 @@
+.commission-viewer .searching {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 30px;
+}
+
+.commission-viewer .searching label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.commission-viewer .searching input {
+    padding-inline: 3px;
+    text-align: left;
+}

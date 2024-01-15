@@ -1,0 +1,47 @@
+.commission-viewer {
+    padding-inline: 1rem;
+}
+
+.commission-viewer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.commission-viewer .loader {
+    flex: 1;
+    width: 96px
+}
+
+.commission-viewer .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commission-viewer .top .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.commission-viewer .top .right .sorting-and-searching-and-filtering {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.commission-viewer .top .right .sorting-and-filtering {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.commission-viewer h1 {
+    align-self: flex-start;
+}

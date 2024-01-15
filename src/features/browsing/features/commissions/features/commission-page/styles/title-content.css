@@ -1,0 +1,17 @@
+.commission-page .title-content {
+    display: grid;
+    grid-template-columns: minmax(40px, min-content) 1fr minmax(75px, min-content);
+    grid-template-rows: minmax(80px, min-content);
+    gap: 10px;
+    background-color: var(--pallete-color-1);
+    padding-inline: 1rem;
+}
+
+.commission-page .title-content button {
+    height: 40px;
+    white-space: nowrap;
+    align-self: center;
+    justify-self: center;
+}
+
+
