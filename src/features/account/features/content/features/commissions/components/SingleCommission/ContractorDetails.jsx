@@ -1,5 +1,6 @@
-const ContractorDetails = ({contractor}) => {
+import ApplicationsForCommission from "../../features/menaging_applications/ApplicationsForCommission";
 
+const ContractorDetails = ({contractor, applications, setCommission}) => {
     return (
         <div className="contractor">
             {contractor && <table>
@@ -23,7 +24,11 @@ const ContractorDetails = ({contractor}) => {
                 </tr>
                 </tbody>
             </table>}
-            {!contractor && <span>Nikt jeszcze nie podjął się tego zlecenia.</span>}
+            {!contractor && (applications === null ?
+                <span>
+                    Zlecenie nie posiada przydzielonego operatora oraz jeszcze żaden operator nie zgłosił się do jego wypełnienia.
+
+                </span> : <ApplicationsForCommission applications={applications} setCommission={setCommission}/>)}
         </div>
     );
 };

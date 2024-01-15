@@ -16,6 +16,10 @@ const OtherDetails = ({details}) => {
                     <span>{details?.city}</span>
                 </div>
                 <div>
+                    <span className="label">Data utworzenia zlecenia: </span>
+                    <span>{new Date(details?.createdAt).toLocaleDateString()}</span>
+                </div>
+                <div>
                     <span className="label">Data rozpoczęcia zdjęć: </span>
                     <span>{new Date(details?.start_date).toLocaleDateString()}</span>
                 </div>

@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {ServerCommunicator} from "../../../../../../../../shared/services/ServerCommunicator";
 import CaretDownSVG from "../../../../../../../../shared/assets/media/svg/CaretSVG/down/CaretDownSVG";
-import "./style.css";
+import "../../styles/single-commission.css";
 import AuthorDetails from "./AuthorDetails";
 import OtherDetails from "./OtherDetails";
 import ContractorDetails from "./ContractorDetails";
@@ -14,6 +14,8 @@ const SingleCommission = ({id, type}) => {
     const [loading, setLoading] = useState(true);
     const [showEditForm, setShowEditForm] = useState(false);
     const [detailsOpen, setDetailsOpen] = useState(false);
+    console.log(commission)
+
     useEffect(() => {
         setCommission(null)
         ServerCommunicator.handleRequest("get", `/api/commissions/${id}`)
@@ -27,6 +29,12 @@ const SingleCommission = ({id, type}) => {
         <div className="commission">
             {!loading && (
                 <>
+                    {commission?.contractor === undefined && commission?.applications && !detailsOpen &&
+                        <div className="applications-info">
+                            Operator wyraził chęć zrealizowania zlecenia. Używając strzałki wejdź w szczegóły zlecenia,
+                            i potwierdź lub odrzuć operatora.
+                        </div>
+                    }
                     <div className="important-details">
                         <div>
                             <span className="label">ID: </span>
@@ -37,6 +45,7 @@ const SingleCommission = ({id, type}) => {
                                 <>
                                     <span className="label">Autor: </span>
                                     <span>
+
                                         {commission?.author?.firstName}{" "}
                                         {commission?.author?.lastName}
                                     </span>
@@ -46,8 +55,7 @@ const SingleCommission = ({id, type}) => {
                                 <>
                                     <span className="label">Operator: </span>
                                     <span>
-                                        {commission?.contractor?.firstName}{" "}
-                                        {commission?.contractor?.lastName}
+                                        {commission?.contractor ? commission.contractor?.firstName + " " + commission.contractor?.lastName : "Brak"}
                                     </span>
                                 </>
                             )}
@@ -80,7 +88,9 @@ const SingleCommission = ({id, type}) => {
                                         <AuthorDetails author={commission?.author}/>
                                     )}
                                     {type === "client" && (
-                                        <ContractorDetails contractor={commission?.contractor}/>
+                                        <ContractorDetails contractor={commission?.contractor}
+                                                           applications={commission?.applications}
+                                                           setCommission={setCommission}/>
                                     )}
 
                                     <OtherDetails details={commission?.details}/>
