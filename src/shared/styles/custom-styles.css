@@ -3,18 +3,17 @@ a,
 .animated-hover {
     text-decoration: none;
     font-weight: bold;
-    color: var(--pallete-dark);
+    color: var(--pallete-color-3);
     background-image: linear-gradient(
             to right,
-            var(--pallete-violet) 50%,
-            var(--pallete-dark) 50%
+            var(--pallete-color-4) 50%,
+            var(--pallete-color-3) 50%
     );
     background-size: 200% 100%;
     background-position: 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -43,7 +42,7 @@ input[type="password"]:focus,
 input[type="number"]:focus,
 input[type="date"]:focus,
 textarea:focus {
-    box-shadow: 0 0 2px 2px var(--pallete-violet-0_4);
+    box-shadow: 0 0 2px 2px var(--pallete-color-4-opacity-0_4);
 }
 
 /* submit custom style */
@@ -70,27 +69,52 @@ textarea, input[type="date"] {
 .violet_button {
     padding: 8px 12px;
     line-height: 1rem;
-
     border: 0;
     border-radius: 2px;
-
-    background: var(--pallete-violet);
-    color: var(--pallete-light);
+    background: var(--pallete-color-4);
+    color: var(--pallete-color-1);
     font-weight: 300;
     font-size: 16px;
     font-family: "Roboto", serif;
-
     transition: box-shadow 200ms linear,
     background-color 200ms linear;
-
     cursor: pointer;
 }
 
 .violet_button:hover {
-    background: var(--pallete-violet_darker);
-    box-shadow: 0 0 10px 1px var(--pallete-violet);
+    background: var(--pallete-color-4-darker);
+    box-shadow: 0 0 10px 1px var(--pallete-color-4);
 }
 
 .violet_button:hover:active {
+    opacity: 95%;
+}
+
+/* Dark blue button */
+.dark_blue_button {
+    padding: 8px 12px;
+    line-height: 1rem;
+    border: 0;
+    border-radius: 2px;
+    background: var(--pallete-color-6);
+    color: var(--pallete-color-1);
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Roboto", serif;
+    transition: box-shadow 200ms linear,
+    background-color 200ms linear;
+    cursor: pointer;
+}
+
+.dark_blue_button:disabled {
+    background: var(--pallete-color-6-brighter);
+}
+
+.dark_blue_button:hover {
+    background: var(--pallete-color-6-darker);
+    box-shadow: 0 0 10px 1px var(--pallete-color-6);
+}
+
+.dark_blue_button:hover:active {
     opacity: 95%;
 }
