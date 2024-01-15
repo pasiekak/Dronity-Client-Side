@@ -1,4 +1,4 @@
-.pagination-panel {
+.account-commissions .pagination-panel {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6,30 +6,30 @@
     gap: 1rem;
 }
 
-.pagination-panel .dot {
+.account-commissions .pagination-panel .dot {
     width: 16px;
     height: 16px;
     border-radius: 50%;
 }
 
-.pagination-panel .caret {
-    fill: var(--pallete-dark);
+.account-commissions .pagination-panel .caret {
+    fill: var(--pallete-color-3);
     height: 32px;
     width: 32px;
 }
 
-.pagination-panel .dot {
-    background: var(--pallete-dark);
+.account-commissions .pagination-panel .dot {
+    background: var(--pallete-color-3);
 }
 
-.pagination-panel .dot:hover {
-    background: var(--pallete-violet-0_6);
+.account-commissions .pagination-panel .dot:hover {
+    background: var(--pallete-color-4-opacity-0_6);
 }
 
-.pagination-panel .caret:hover {
-    fill: var(--pallete-violet);
+.account-commissions .pagination-panel .caret:hover {
+    fill: var(--pallete-color-4);
 }
 
-.pagination-panel .dot.selected {
-    background: var(--pallete-violet);
+.account-commissions .pagination-panel .dot.selected {
+    background: var(--pallete-color-4);
 }
