@@ -1,0 +1,13 @@
+#logo-svg .cls-1 {
+    stroke-width: 4px;
+}
+
+#logo-svg .cls-1, .cls-2 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+}
+
+#logo-svg .cls-3 {
+    stroke-width: 0px;
+}

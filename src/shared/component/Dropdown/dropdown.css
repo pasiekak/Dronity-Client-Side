@@ -1,0 +1,78 @@
+.dropdown {
+    position: relative;
+    font-weight: bold;
+    color: var(--pallete-color-3);
+    cursor: pointer;
+}
+
+.dropdown .trigger {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown .caret {
+    margin-left: 3px;
+    transition: 500ms linear;
+}
+
+.dropdown .caret > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown svg {
+    height: 12px;
+    width: 12px;
+}
+
+.dropdown .caret.flip {
+    rotate: 180deg;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 999;
+
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 0;
+    border-radius: 0 0 5px 5px;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 500ms linear;
+}
+
+.menu.open {
+    grid-template-rows: 1fr;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid var(--pallete-color-3-opacity-0_2);
+}
+
+.menu .menu-wrapper {
+    min-height: 0;
+}
+
+.menu > .menu-wrapper > li > button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+
+    background: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.menu > .menu-wrapper > li > button span {
+    color: var(--pallete-color-3-opacity-0_2);
+    white-space: nowrap;
+}

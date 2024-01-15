@@ -1,0 +1,14 @@
+.commission-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.commission-page.loading {
+    justify-content: center;
+    align-items: center;
+}
+
+.commission-page .loader {
+    height: 256px;
+    width: 256px;
+}

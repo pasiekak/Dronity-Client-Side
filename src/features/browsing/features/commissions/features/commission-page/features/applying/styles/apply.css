@@ -1,0 +1,28 @@
+.commission-page .apply {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commission-page .apply .apply-form {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    background: var(--pallete-color-5-brighter);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--pallete-color-1-opacity-0_2)
+}
+
+.commission-page .apply .apply-form .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}

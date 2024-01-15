@@ -1,0 +1,25 @@
+.commission-applications {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.commission-applications .title {
+    text-align: center;
+}
+
+.commission-applications .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 15ch 0.75fr 0.1fr 0.5fr;
+    grid-template-rows: minmax(80px, min-content);
+}
+
+.commission-applications .columns span {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.commission-applications .columns span:first-of-type {
+    justify-content: flex-start;
+}

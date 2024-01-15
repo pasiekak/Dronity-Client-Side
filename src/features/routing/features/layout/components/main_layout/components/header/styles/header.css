@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem var(--scrollbar-width) 0 1rem;
+}
+
+.header .logo {
+    height: 5rem;
+}
+
+.header nav {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+@media (max-width: 767px) {
+    .header nav {
+        width: 100%;
+    }
+}

@@ -1,0 +1,26 @@
+.yes-or-no {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    background: var(--pallete-color-1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.yes-or-no .question {
+    text-align: center;
+    padding-inline: 1rem;
+}
+
+.yes-or-no .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}

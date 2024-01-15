@@ -1,0 +1,36 @@
+.navigation {
+    padding-inline: 5rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-bottom: 1px solid var(--pallete-color-3-opacity-0_4);
+
+
+}
+
+.navigation a {
+    line-height: 2rem;
+    background-image: linear-gradient(
+            to right,
+            var(--pallete-color-4) 50%,
+            var(--pallete-color-3-opacity-0_6) 50%
+    );
+    border-bottom: transparent 3px solid;
+}
+
+.navigation a.selected {
+    background-image: linear-gradient(
+            to right,
+            var(--pallete-color-4) 50%,
+            var(--pallete-color-4) 50%
+    );
+
+    border-bottom: var(--pallete-color-4) 3px solid;
+}
+
+@media (max-width: 767px) {
+    .navigation {
+        padding: 0 0 0 var(--scrollbar-width);
+    }
+}

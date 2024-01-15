@@ -1,0 +1,27 @@
+#loader-svg .cls-1 {
+    stroke-width: 4px;
+}
+
+#loader-svg .cls-1, .cls-2 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+}
+
+#loader-svg .cls-3 {
+    stroke-width: 0px;
+}
+
+#loader-svg {
+    animation: spin 5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(calc(360deg * 8));
+    }
+}
