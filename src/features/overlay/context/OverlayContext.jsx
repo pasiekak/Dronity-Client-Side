@@ -13,11 +13,11 @@ export const OverlayProvider = ({children}) => {
 
     return (
         <OverlayContext.Provider
-        value={{
-            type, message,
-            setType, setMessage,
-            clearOverlay
-        }}>
+            value={{
+                type, message,
+                setType, setMessage,
+                clearOverlay
+            }}>
             {children}
         </OverlayContext.Provider>
     )
