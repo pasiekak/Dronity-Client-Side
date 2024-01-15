@@ -1,28 +1,51 @@
 :root {
-    --pallete-light: rgb(234, 253, 248);
-    --pallete-light-0_2: rgba(234, 253, 248, 0.2);
-    --pallete-light-0_4: rgba(234, 253, 248, 0.4);
-    --pallete-light-0_6: rgba(234, 253, 248, 0.6);
-    --pallete-light-0_8: rgba(234, 253, 248, 0.8);
+    --pallete-color-1-brighter: #F9F5EE;
+    --pallete-color-1: #F8F3EA;
+    --pallete-color-1-darker: #C6C2BB;
+    --pallete-color-1-opacity-0_2: #F8F3EA33;
+    --pallete-color-1-opacity-0_4: #F8F3EA66;
+    --pallete-color-1-opacity-0_6: #F8F3EA99;
+    --pallete-color-1-opacity-0_8: #F8F3EACC;
 
-    --pallete-second-light: rgba(222, 221, 228, 1);
-    --pallete-second-light-0_2: rgba(222, 221, 228, 0.2);
-    --pallete-second-light-0_4: rgba(222, 221, 228, 0.4);
-    --pallete-second-light-0_6: rgba(222, 221, 228, 0.6);
-    --pallete-second-light-0_8: rgba(222, 221, 228, 0.8);
+    --pallete-color-2-brighter: #EBE0D2;
+    --pallete-color-2: #E6D8C7;
+    --pallete-color-2-darker: #B8AD9F;
+    --pallete-color-2-opacity-0_2: #E6D8C733;
+    --pallete-color-2-opacity-0_4: #E6D8C766;
+    --pallete-color-2-opacity-0_6: #E6D8C799;
+    --pallete-color-2-opacity-0_8: #E6D8C7CC;
 
-    --pallete-dark: rgba(4, 8, 15, 1);
-    --pallete-dark-0_2: rgba(4, 8, 15, 0.2);
-    --pallete-dark-0_4: rgba(4, 8, 15, 0.4);
-    --pallete-dark-0_6: rgba(4, 8, 15, 0.6);
-    --pallete-dark-0_8: rgba(4, 8, 15, 0.8);
+    --pallete-color-3-brighter: #36393F;
+    --pallete-color-3: #04080F;
+    --pallete-color-3-darker: #03060C;
+    --pallete-color-3-opacity-0_2: #04080F33;
+    --pallete-color-3-opacity-0_4: #04080F66;
+    --pallete-color-3-opacity-0_6: #04080F99;
+    --pallete-color-3-opacity-0_8: #04080FCC;
 
-    --pallete-violet_darker: #3E2182;
-    --pallete-violet: rgba(94, 50, 195, 1);
-    --pallete-violet-0_2: rgba(94, 50, 195, 0.2);
-    --pallete-violet-0_4: rgba(94, 50, 195, 0.4);
-    --pallete-violet-0_6: rgba(94, 50, 195, 0.6);
-    --pallete-violet-0_8: rgba(94, 50, 195, 0.8);
+    --pallete-color-4-brighter: #7E5BCF;
+    --pallete-color-4: #5E32C3;
+    --pallete-color-4-darker: #4B289C;
+    --pallete-color-4-opacity-0_2: #5E32C333;
+    --pallete-color-4-opacity-0_4: #5E32C366;
+    --pallete-color-4-opacity-0_6: #5E32C399;
+    --pallete-color-4-opacity-0_8: #5E32C3CC;
+
+    --pallete-color-5-brighter: #B1D6FB;
+    --pallete-color-5: #9ECCFA;
+    --pallete-color-5-darker: #7EA3C8;
+    --pallete-color-5-opacity-0_2: #9ECCFA33;
+    --pallete-color-5-opacity-0_4: #9ECCFA66;
+    --pallete-color-5-opacity-0_6: #9ECCFA99;
+    --pallete-color-5-opacity-0_8: #9ECCFACC;
+
+    --pallete-color-6-brighter: #3C4779;
+    --pallete-color-6: #0B1957;
+    --pallete-color-6-darker: #091446;
+    --pallete-color-6-opacity-0_2: #0B195733;
+    --pallete-color-6-opacity-0_4: #0B195766;
+    --pallete-color-6-opacity-0_6: #0B195799;
+    --pallete-color-6-opacity-0_8: #0B1957CC;
 
     --scrollbar-width: 0.675rem;
 }
