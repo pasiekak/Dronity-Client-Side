@@ -47,3 +47,11 @@ export const formatDate = (stringDate) => {
 
     return [year, month, day].join('-');
 }
+
+export const isNumeric = (str) => {
+    if (str === null || str === undefined || typeof str !== 'string') {
+        return false;
+    }
+
+    return !isNaN(Number(str));
+}
