@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
 
-    background-color: var(--pallete-light);
+    background-color: var(--pallete-color-1);
     padding: 1rem;
     border-radius: 2px;
     gap: 1rem;
@@ -39,8 +39,8 @@
 .database-property .left textarea {
     text-align: left;
     width: 100%;
-    background-color: var(--pallete-violet-0_2);
-    color: var(--pallete-dark);
+    background-color: var(--pallete-color-4-opacity-0_2);
+    color: var(--pallete-color-3);
 }
 
 .database-property .left textarea {
@@ -49,7 +49,7 @@
 }
 
 .database-property .left input::placeholder {
-    color: var(--pallete-dark-0_6);
+    color: var(--pallete-color-3-opacity-0_6);
 }
 
 .database-property .right {
