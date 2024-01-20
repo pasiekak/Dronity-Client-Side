@@ -1,0 +1,20 @@
+.image-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 200ms ease-out;
+}
+
+.image-tile:hover {
+    scale: 1.2;
+}
+
+.image-tile img {
+    max-width: 200px;
+    max-height: 100%;
+}
