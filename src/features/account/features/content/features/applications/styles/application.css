@@ -1,0 +1,24 @@
+.account .operator-applications .applicated-commission .wrapper .inner .application {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(1fr, min-content);
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+}
+
+.account .operator-applications .applicated-commission .wrapper .inner .application .status.accepted {
+    background: #2ecc71;
+}
+
+.account .operator-applications .applicated-commission .wrapper .inner .application .status.rejected {
+    background: #e74c3c;
+}
+
+.account .operator-applications .applicated-commission .wrapper .inner .application .status {
+    font-weight: bold;
+    background: #3498db;
+    padding: 3px;
+    border-radius: 4px;
+}

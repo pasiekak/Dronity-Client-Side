@@ -9,6 +9,11 @@
     gap: 5px;
 }
 
+.account-commissions .commission.canceled {
+    background: var(--pallete-color-1-darker);
+    opacity: 90%;
+}
+
 .account-commissions .commission .label {
     font-weight: bold;
     margin-bottom: 5px;
@@ -19,18 +24,30 @@
     grid-template-columns: 0.2fr 1fr 0.5fr 0.5fr;
 }
 
-.account-commissions .commission .important-details span.completion {
+.account-commissions .commission .important-details .status {
     font-weight: bold;
     padding: 2px 5px;
     border-radius: 2px;
 }
 
-.account-commissions .commission .important-details span.completed {
-    background: limegreen;
+.account-commissions .commission .important-details .status.created {
+    background: #3498db;
 }
 
-.account-commissions .commission .important-details span.not-completed {
-    background: orange;
+.account-commissions .commission .important-details .status.considerable {
+    background: #f39c12;
+}
+
+.account-commissions .commission .important-details .status.accepted {
+    background: #2ecc71;
+}
+
+.account-commissions .commission .important-details .status.done {
+    background: #27ae60;
+}
+
+.account-commissions .commission .important-details .status.canceled {
+    background: #e74c3c;
 }
 
 .account-commissions .commission .details {
@@ -122,13 +139,19 @@
     gap: 2rem;
 }
 
-.account-commissions .commission .details .actions .trash-can, .commission .details .actions .pencil-edit {
+.account-commissions .commission .details .actions .trash-can,
+.account-commissions .commission .details .actions .pencil-edit,
+.account-commissions .commission .details .actions .cancel,
+.account-commissions .commission .details .actions .resume {
     width: 24px;
     height: 24px;
 
     cursor: pointer;
 }
 
-.account-commissions .commission .details .actions .trash-can:hover, .commission .details .actions .pencil-edit:hover {
+.account-commissions .commission .details .actions .trash-can:hover,
+.account-commissions .commission .details .actions .pencil-edit:hover,
+.account-commissions .commission .details .actions .cancel:hover,
+.account-commissions .commission .details .actions .resume:hover {
     fill: var(--pallete-color-4);
 }

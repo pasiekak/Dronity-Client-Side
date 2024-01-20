@@ -1,0 +1,83 @@
+.account .operator-applications .applicated-commission {
+
+}
+
+.account .operator-applications .applicated-commission .always-visible {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(60px, min-content);
+    justify-items: center;
+    align-items: center;
+
+}
+
+.account .operator-applications .applicated-commission .wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+.account .operator-applications .applicated-commission .wrapper.open {
+    grid-template-rows: 1fr;
+}
+
+.account .operator-applications .applicated-commission .wrapper .inner {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.account .operator-applications .applicated-commission .wrapper .inner a {
+    text-align: center;
+    width: fit-content;
+    align-self: center;
+}
+
+.account .operator-applications .applicated-commission .wrapper .inner h3 {
+    text-align: center;
+}
+
+.account .operator-applications .applicated-commission .wrapper .inner .application-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(25px, min-content);
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.account .operator-applications .applicated-commission:nth-child(even) {
+    background-color: var(--pallete-color-1);
+    border-radius: 4px;
+}
+
+.account .operator-applications .applicated-commission:nth-child(even) .actions .caret {
+    background-color: var(--pallete-color-2);
+}
+
+.account .operator-applications .applicated-commission:nth-child(odd) .actions .caret {
+    background-color: var(--pallete-color-1);
+}
+
+.account .operator-applications .applicated-commission .actions .caret:hover {
+    background-color: var(--pallete-color-4-brighter);
+}
+
+.account .operator-applications .applicated-commission .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 0.5rem;
+}
+
+.account .operator-applications .applicated-commission .actions .caret {
+    padding: 10px;
+    border-radius: 50%;
+    transition: 500ms ease-out;
+}
+
+.account .operator-applications .applicated-commission .actions .caret.rotated {
+    rotate: 180deg;
+}

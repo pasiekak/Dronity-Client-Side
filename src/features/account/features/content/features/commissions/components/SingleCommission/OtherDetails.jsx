@@ -10,6 +10,10 @@ const OtherDetails = ({details}) => {
             <span className="description">{details?.description}</span>
             <div className="line"></div>
 
+            <span className="label">Opis szczegółowy stanu zlecenia</span>
+            <span className="description">{details?.status?.longMessage}</span>
+            <div className="line"></div>
+
             <div>
                 <div>
                     <span className="label">Miasto: </span>

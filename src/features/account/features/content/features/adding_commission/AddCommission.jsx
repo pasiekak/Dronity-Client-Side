@@ -7,8 +7,9 @@ const AddCommission = () => {
 
     const handleAddCommission = (id) => {
         setUserDetails(prev => {
+            console.log(prev)
             const temp = JSON.parse(JSON.stringify(prev));
-            temp.Client.AuthorCommissions = [...temp.Client.AuthorCommissions, {id}]
+            temp.Client.AuthorCommissions = [{id}, ...temp.Client.AuthorCommissions]
             return temp;
         })
     }

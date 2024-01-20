@@ -20,6 +20,7 @@ const NewCommissionForm = ({handleAddCommission}) => {
     const onSubmit = (data) => {
         ServerCommunicator.handleRequest('post', '/api/commissions', data).then(res => {
             if (res.success) {
+                console.log(res.data)
                 handleAddCommission(res.data.id);
                 setNewCommissionID(res.data.id);
                 setSuccess(true);
