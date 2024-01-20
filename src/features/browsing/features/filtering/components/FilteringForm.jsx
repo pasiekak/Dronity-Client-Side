@@ -1,5 +1,5 @@
 import {useForm} from "react-hook-form";
-import {formatDate} from "../../../../../../../shared/utils/utils";
+import {formatDate} from "../../../../../shared/utils/utils";
 
 const FilteringForm = ({filters, setFilters}) => {
     const {register, handleSubmit, watch, reset} = useForm({

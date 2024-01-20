@@ -1,0 +1,48 @@
+.commissions-outlet .pagination-panel,
+.operators-outlet .pagination-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.commissions-outlet .pagination-panel .page-choice,
+.operators-outlet .pagination-panel .page-choice {
+    font-size: 24px;
+    line-height: 24px;
+
+    color: var(--pallete-color-1);
+}
+
+.commissions-outlet .pagination-panel .caret,
+.operators-outlet .pagination-panel .caret {
+    fill: var(--pallete-color-1);
+    width: 24px;
+    height: 24px;
+}
+
+.commissions-outlet .pagination-panel .page-choice,
+.commissions-outlet .pagination-panel .caret,
+.operators-outlet .pagination-panel .page-choice,
+.operators-outlet .pagination-panel .caret {
+    background: var(--pallete-color-6);
+    border-radius: 5px;
+    padding: 10px;
+    transition: 100ms linear;
+    cursor: pointer;
+}
+
+.commissions-outlet .pagination-panel .page-choice:hover,
+.commissions-outlet .pagination-panel .caret:hover,
+.operators-outlet .pagination-panel .page-choice:hover,
+.operators-outlet .pagination-panel .caret:hover {
+    background: var(--pallete-color-6-brighter);
+    box-shadow: 0 0 10px var(--pallete-color-6-brighter);
+}
+
+.commissions-outlet .pagination-panel .page-choice:hover:active,
+.commissions-outlet .pagination-panel .caret:hover:active,
+.operators-outlet .pagination-panel .page-choice:hover:active,
+.operators-outlet .pagination-panel .caret:hover:active {
+    background: var(--pallete-color-6-darker);
+}

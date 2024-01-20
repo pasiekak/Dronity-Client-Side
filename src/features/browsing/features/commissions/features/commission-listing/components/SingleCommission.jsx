@@ -14,7 +14,8 @@ const SingleCommission = ({commission, index}) => {
 
 
     return (
-        <div className="single-commission" onClick={() => navigate(`/commission-viewer/commission/${commission.id}`)}>
+        <div className="single-commission"
+             onClick={() => navigate(`/commission-viewer/commission/${commission.id}`, {replace: true})}>
             <span className="title">{commission.title}</span>
             <span className="start_date">{new Date(commission.start_date).toLocaleDateString()}</span>
             <span className="city">{commission.city}</span>

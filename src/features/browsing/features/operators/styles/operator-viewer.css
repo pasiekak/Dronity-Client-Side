@@ -1,0 +1,8 @@
+.operators-outlet .operator-viewer {
+    flex: 1;
+    padding-inline: 1rem;
+}
+
+.operators-outlet .operator-viewer .list-info {
+    text-align: center;
+}

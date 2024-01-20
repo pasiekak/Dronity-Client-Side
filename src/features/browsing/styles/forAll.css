@@ -1,0 +1,43 @@
+.operators-outlet, .commissions-outlet {
+    display: flex;
+    flex: 1;
+}
+
+.operators-outlet {
+
+}
+
+.commissions-outlet {
+
+}
+
+.operators-outlet .top,
+.commissions-outlet .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.operators-outlet .top .right,
+.commissions-outlet .top .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.operators-outlet .top .right .sorting-and-searching-and-filtering,
+.commissions-outlet .top .right .sorting-and-searching-and-filtering {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.operators-outlet .top .right .sorting-and-filtering,
+.commissions-outlet .top .right .sorting-and-filtering {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

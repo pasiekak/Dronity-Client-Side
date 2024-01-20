@@ -3,7 +3,7 @@ import CaretLeftSVG from "../../../../../../../shared/assets/media/svg/CaretSVG/
 import {useNavigate} from "react-router-dom";
 import Apply from "../features/applying/Apply";
 
-const TitleContent = ({id, title, applied, setCommission, suggestedPayment}) => {
+const TitleContent = ({id, title, haveContractor, setCommission, suggestedPayment, applications, setApplications}) => {
     const navigate = useNavigate();
 
 
@@ -13,7 +13,9 @@ const TitleContent = ({id, title, applied, setCommission, suggestedPayment}) => 
                 <CaretLeftSVG/>
             </button>
             <h1 className="title">{title}</h1>
-            <Apply applied={applied} setCommission={setCommission} id={id} suggestedPayment={suggestedPayment}/>
+            {!haveContractor && <Apply setCommission={setCommission} id={id} applications={applications}
+                                       setApplications={setApplications}
+                                       suggestedPayment={suggestedPayment}/>}
         </div>
     )
 }

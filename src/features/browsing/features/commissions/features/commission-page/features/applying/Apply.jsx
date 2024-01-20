@@ -3,31 +3,36 @@ import './styles/apply.css';
 import ApplyForm from "./components/ApplyForm";
 import {ServerCommunicator} from "../../../../../../../../shared/services/ServerCommunicator";
 
-const Apply = ({applied, id, setCommission, suggestedPayment}) => {
+const Apply = ({id, setCommission, suggestedPayment, setApplications, applications}) => {
     const [showForm, setShowForm] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [haveConsiderableApplication, setHaveConsiderableApplication] = useState(applications?.some(ob => ob.accepted === null));
     const handleClick = () => {
-        if (applied) {
+        if (haveConsiderableApplication) {
             setLoading(true);
             ServerCommunicator.handleRequest('delete', `/api/applications/${id}`).then(res => {
                 if (res.success) {
                     setCommission(prev => {
-                        return {...prev, applied: false}
+                        return {...prev}
                     })
+                    setApplications(prev => {
+                        return prev.filter(ob => ob.accepted !== null);
+                    })
+                    setHaveConsiderableApplication(false);
                 }
             }).finally(() => setLoading(false))
         } else {
             setShowForm(true);
         }
     }
-
     return (
         <div className="apply">
             <button className="dark_blue_button" disabled={showForm || loading} onClick={handleClick}>
-                {applied ? "Anuluj zgłoszenie" : "Zgłoś się"}
+                {haveConsiderableApplication ? "Anuluj zgłoszenie" : "Zgłoś się"}
             </button>
             {showForm && <ApplyForm suggestedPayment={parseFloat(suggestedPayment).toFixed(2)} setShowForm={setShowForm}
-                                    setCommission={setCommission} id={id}/>}
+                                    id={id} setApplications={setApplications}
+                                    setHaveConsiderableApplication={setHaveConsiderableApplication}/>}
         </div>
     )
 }

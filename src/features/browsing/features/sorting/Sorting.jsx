@@ -1,7 +1,9 @@
 import './sorting.css';
-import Dropdown from "../../../../../../shared/component/Dropdown/Dropdown";
+import Dropdown from "../../../../shared/component/Dropdown/Dropdown";
+import {useOutletContext} from "react-router-dom";
 
-const Sorting = ({sorting, setSorting}) => {
+const Sorting = () => {
+    const {sorting, setSorting} = useOutletContext();
     const sortingChoices = [{
         text: "Sugerowana kwota rosnąco", handleClick: () => {
             setSorting({by: "suggested_payment", order: "ASC"})

@@ -1,4 +1,5 @@
-.commission-viewer .sorting .dropdown .menu {
+.commission-viewer .sorting .dropdown .menu,
+.operator-viewer .sorting .dropdown .menu {
     background-color: var(--pallete-color-2);
     border-radius: 5px;
     padding-inline: 1rem;

@@ -1,0 +1,14 @@
+.operator-page .description-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 1rem;
+}
+
+.operator-page .description-wrapper h2 {
+    text-align: center;
+}
+
+.operator-page .description-wrapper .description {
+    white-space: pre-line;
+    font-size: 18px;
+}

@@ -1,7 +1,9 @@
 import SingleCommission from "./components/SingleCommission";
 import './styles/commission-list.css';
+import {useOutletContext} from "react-router-dom";
 
-const CommissionList = ({commissions}) => {
+const CommissionList = () => {
+    const {commissions} = useOutletContext();
     return (
         <div className="commission-list">
             <div className="columns">
