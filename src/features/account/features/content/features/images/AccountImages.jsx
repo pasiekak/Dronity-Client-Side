@@ -13,7 +13,8 @@ const AccountImages = () => {
             <div className="actions">
                 <AddImage operatorID={userDetails?.Operator.id} setReloadGallery={setReloadGallery}/>
             </div>
-            {userDetails && <ImageGallery operatorID={userDetails?.Operator.id} reloadGallery={reloadGallery}/>}
+            {userDetails && <ImageGallery operatorID={userDetails?.Operator.id} reloadGallery={reloadGallery}
+                                          setReloadGallery={setReloadGallery} type="operator"/>}
         </div>
     )
 }

@@ -5,7 +5,9 @@ import SingleCommission from "../SingleCommission/SingleCommission";
 const Commissions = ({commissions, type}) => {
     return (
         <div className="commissions">
-            <PaginatedItems items={commissions} itemsPerPage={5} Component={SingleCommission} typeOfUser={type}/>
+            {commissions.length === 0 && <span>Nie masz jeszcze żadnych zleceń.</span>}
+            {commissions.length > 0 &&
+                <PaginatedItems items={commissions} itemsPerPage={5} Component={SingleCommission} typeOfUser={type}/>}
         </div>
     );
 };

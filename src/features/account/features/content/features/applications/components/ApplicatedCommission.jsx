@@ -24,7 +24,8 @@ const ApplicatedCommission = ({commissionID}) => {
         ServerCommunicator.handleRequest("get", `/api/commissions/${commissionID}`).then(res => {
             if (res.success) {
                 setCommissionDetails(res.data);
-                setLastApplicationStatus(res.data.applications[res.data.applications.length - 1].accepted);
+                const applications = res.data.applications.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+                setLastApplicationStatus(applications[applications.length - 1].accepted);
             }
         })
     }, [commissionID]);

@@ -27,7 +27,7 @@ const AddImageForm = ({operatorID, setReloadGallery}) => {
                     multiple
                     {...register('files')}
                 />
-                <button type="submit">Zapisz</button>
+                <button className="violet_button" type="submit">Zapisz</button>
             </div>
         </form>
     )

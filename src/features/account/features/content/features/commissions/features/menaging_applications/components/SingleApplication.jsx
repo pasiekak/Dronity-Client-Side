@@ -4,12 +4,14 @@ import '../styles/single-application.css';
 import YesOrNo from "../../../../../../../../../shared/component/YesOrNo/YesOrNo";
 import LoaderSVG from "../../../../../../../../../shared/assets/media/svg/LoaderSVG/LoaderSVG";
 import RejectApplicationForm from "./RejectApplicationForm";
+import {useNavigate} from "react-router-dom";
 
 const SingleApplication = ({application, setApplications, setCommission}) => {
     const [operator, setOperator] = useState();
     const [showQuestionForReject, setShowQuestionForReject] = useState(false);
     const [showQuestionForAccept, setShowQuestionForAccept] = useState(false);
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (operator === undefined && application?.OperatorId !== undefined) {
@@ -99,7 +101,10 @@ const SingleApplication = ({application, setApplications, setCommission}) => {
                         <span>{parseFloat(application?.offered_payment).toFixed(2)}zł</span>
                     </div>
                     <div className="field application-actions">
-                        <button className="dark_blue_button">Zobacz profil</button>
+                        <button className="dark_blue_button"
+                                onClick={() => navigate(`/operator-viewer/operator/${application.OperatorId}`)}>Zobacz
+                            profil
+                        </button>
                         <button className="violet_button" onClick={() => setShowQuestionForReject(true)}>Odrzuć</button>
                         <button className="violet_button" onClick={() => setShowQuestionForAccept(true)}>Zatwierdź
                         </button>

@@ -28,3 +28,13 @@
 .limit-picker button:hover:active {
     background: var(--pallete-color-6-darker);
 }
+
+@media (max-width: 767px) {
+    .limit-picker {
+        height: fit-content;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 30px 30px 30px 30px;
+        gap: 5px;
+    }
+}

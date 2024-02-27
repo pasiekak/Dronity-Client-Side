@@ -16,6 +16,6 @@
 
 @media (max-width: 767px) {
     .account-bottom {
-        padding: 0 calc(1rem + var(--scrollbar-width)) 1rem var(--scrollbar-width);
+        padding: 0 var(--scrollbar-width) 1rem var(--scrollbar-width);
     }
 }

@@ -1,6 +1,6 @@
 .operator-page .operator-profile {
     display: grid;
-    grid-template-columns: 1fr 200px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 200px;
     background: var(--pallete-color-2);
     padding-block: 0.5rem;

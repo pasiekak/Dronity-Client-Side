@@ -3,7 +3,7 @@ import {ServerCommunicator} from "../../shared/services/ServerCommunicator";
 import './styles/image-gallery.css';
 import ImageTile from "./components/ImageTile";
 
-const ImageGallery = ({operatorID, reloadGallery}) => {
+const ImageGallery = ({operatorID, reloadGallery, setReloadGallery, type}) => {
     const [imagesIDs, setImagesIDs] = useState(null);
     const [count, setCount] = useState(null);
 
@@ -18,7 +18,8 @@ const ImageGallery = ({operatorID, reloadGallery}) => {
 
     return (
         <section className="image-gallery">
-            {imagesIDs && imagesIDs.map((id) => <ImageTile id={id} key={id}/>)}
+            {imagesIDs && imagesIDs.map((id) => <ImageTile id={id} key={id} setReloadGallery={setReloadGallery}
+                                                           type={type}/>)}
         </section>
     )
 }

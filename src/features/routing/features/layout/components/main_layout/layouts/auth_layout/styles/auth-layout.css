@@ -20,11 +20,7 @@
     border-radius: 10px;
 
     margin-block: 2rem;
-    max-width: 35%;
-}
-
-.auth h1 {
-    word-wrap: anywhere;
+    max-width: 80%;
 }
 
 .auth form, .auth .activation {
@@ -48,7 +44,10 @@
     font-weight: bold;
 }
 
-.auth .email-message {
+.auth .message-email {
+}
+
+.auth .email {
     font-weight: bold;
 }
 
@@ -62,4 +61,11 @@
     top: 0;
     left: auto;
     z-index: -1;
+}
+
+.auth .account_type {
+    max-width: 20em;
+}
+
+@media (max-width: 767px) {
 }

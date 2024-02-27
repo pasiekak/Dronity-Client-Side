@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './styles/apply.css';
 import ApplyForm from "./components/ApplyForm";
 import {ServerCommunicator} from "../../../../../../../../shared/services/ServerCommunicator";
@@ -7,6 +7,12 @@ const Apply = ({id, setCommission, suggestedPayment, setApplications, applicatio
     const [showForm, setShowForm] = useState(false);
     const [loading, setLoading] = useState(false);
     const [haveConsiderableApplication, setHaveConsiderableApplication] = useState(applications?.some(ob => ob.accepted === null));
+
+    useEffect(() => {
+        if (applications?.some(ob => ob?.accepted === null)) {
+            setHaveConsiderableApplication(true);
+        }
+    }, [applications]);
     const handleClick = () => {
         if (haveConsiderableApplication) {
             setLoading(true);

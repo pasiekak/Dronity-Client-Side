@@ -16,12 +16,18 @@ const OperatorItem = ({operator, index}) => {
     return (
         <div className="operator-item"
              onClick={() => navigate(`/operator-viewer/operator/${operator.id}`, {replace: true})}>
+            <span className="column"></span>
             {imageID ? <img src={`/api/images/${imageID}`} alt='' className="profile-image"/> :
                 <img src={profilePlaceholder} alt='' className="profile-image"/>}
-
+            <span className="column">Operator:</span>
             <span className="first-last-name">{operator.firstName} {operator.lastName}</span>
+
+            <span className="column">Licencja:</span>
             <span className="license">{operator.license}</span>
+
+            <span className="column">Miasto:</span>
             <span className="city">{operator.city}</span>
+
             <div className={innerClass}>
 
             </div>

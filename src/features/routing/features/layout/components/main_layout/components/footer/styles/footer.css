@@ -1,3 +1,28 @@
-.footer {
+footer {
     min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+footer .logo {
+    width: 128px;
+    height: auto;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
 }

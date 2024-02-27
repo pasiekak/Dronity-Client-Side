@@ -110,6 +110,14 @@
     text-align: center;
 }
 
+.account-commissions .commission .details .big-screen {
+    display: table;
+}
+
+.account-commissions .commission .details .small-screen {
+    display: none;
+}
+
 .account-commissions .commission .details .title {
     font-size: 20px;
     font-weight: bold;
@@ -154,4 +162,26 @@
 .account-commissions .commission .details .actions .cancel:hover,
 .account-commissions .commission .details .actions .resume:hover {
     fill: var(--pallete-color-4);
+}
+
+@media (max-width: 767px) {
+    .account-commissions .commission .important-details {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    .account-commissions .commission .details .big-screen {
+        display: none;
+    }
+
+    .account-commissions .commission .details .small-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }

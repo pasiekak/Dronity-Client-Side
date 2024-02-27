@@ -1,6 +1,6 @@
 {
   "name": "drone_app_frontend",
-  "proxy": "https://localhost:8000",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

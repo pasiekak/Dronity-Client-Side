@@ -41,7 +41,6 @@ const CommissionViewer = () => {
                     <PaginationPanel/>
                 </>
             }
-
         </div>
     );
 

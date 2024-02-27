@@ -6,7 +6,6 @@ import Apply from "../features/applying/Apply";
 const TitleContent = ({id, title, haveContractor, setCommission, suggestedPayment, applications, setApplications}) => {
     const navigate = useNavigate();
 
-
     return (
         <div className="title-content">
             <button className="dark_blue_button" onClick={() => navigate('/commission-viewer')}>

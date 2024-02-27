@@ -23,9 +23,9 @@ const OperatorApplications = () => {
     return (
         <div className={`account-bottom operator-applications${loading ? " loading" : ""}`}>
             <div className="columns">
-                <span>Imię i nazwisko autora zlecenia</span>
-                <span>Tytuł zlecenia</span>
-                <span>Stan twojej ostatniej aplikacji</span>
+                <span>Autor zlecenia</span>
+                <span>Tytuł</span>
+                <span>Stan ostatniej aplikacji</span>
             </div>
             {loading && applicatedCommissions.length === 0 ? <LoaderSVG className="loader"/> :
                 applicatedCommissions.map((id, index) => {

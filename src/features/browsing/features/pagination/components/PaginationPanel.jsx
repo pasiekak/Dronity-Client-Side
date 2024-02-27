@@ -31,9 +31,9 @@ const PaginationPanel = () => {
 
     return (
         <div className="pagination-panel">
-            <CaretLeftSVG className="caret" onClick={decPage}/>
+            <CaretLeftSVG className="caret" onClick={decPage} disabled={pagination.page !== 1}/>
             <input type="text" value={inputValue} onChange={handleChange}/>
-            <CaretRightSVG className="caret" onClick={incPage}/>
+            <CaretRightSVG className="caret" onClick={incPage} disabled={pagination.page !== pagination.maxPage}/>
         </div>
     )
 }

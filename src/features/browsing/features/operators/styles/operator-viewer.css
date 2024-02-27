@@ -3,6 +3,10 @@
     padding-inline: 1rem;
 }
 
+.operators-outlet .operator-viewer h1 {
+    align-self: flex-start;
+}
+
 .operators-outlet .operator-viewer .list-info {
     text-align: center;
 }

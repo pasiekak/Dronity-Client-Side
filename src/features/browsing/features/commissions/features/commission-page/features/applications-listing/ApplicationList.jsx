@@ -19,6 +19,7 @@ const ApplicationList = ({applications}) => {
                     <span>{rejectedCount}</span>
                 </div>
             </div>
+            {accepted && <span>Jedno z twoich zgłoszeń zostało zaakceptowane przez właściciela zlecenia.</span>}
             <div className="columns">
                 <span>Numer zgłoszenia</span>
                 <span>Twoja kwota</span>
@@ -26,7 +27,6 @@ const ApplicationList = ({applications}) => {
                 <span>Godzina złożenia zgłoszenia</span>
                 <span>Decyzja klienta</span>
             </div>
-            {accepted && <span>Jedno z twoich zgłoszeń zostało zaakceptowane przez właściciela zlecenia.</span>}
             {applications.map((application, index) => <ApplicationItem key={index} index={index + 1}
                                                                        application={application}/>)}
         </div>

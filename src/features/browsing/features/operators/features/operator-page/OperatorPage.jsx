@@ -32,7 +32,10 @@ const OperatorPage = () => {
                      }}
             />
             <Description description={operator?.description}/>
-            <ImageGallery operatorID={id}/>
+            <section className="images">
+                <h2>Moje zdjęcia</h2>
+                <ImageGallery operatorID={id} type="client"/>
+            </section>
         </div>
     )
 }

@@ -19,3 +19,12 @@
     padding-inline: 3px;
     text-align: left;
 }
+
+@media (max-width: 767px) {
+    .commission-viewer .searching,
+    .operator-viewer .searching {
+        flex-direction: column;
+        height: fit-content;
+        gap: 10px;
+    }
+}

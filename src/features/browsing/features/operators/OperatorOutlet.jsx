@@ -55,7 +55,7 @@ const OperatorOutlet = () => {
 
 
     return (
-        <div className={`content operators-outlet${loading ? ' loading' : ''}`}>
+        <div className={`operators-outlet${loading ? ' loading' : ''}`}>
             <Outlet
                 context={{
                     pagination,

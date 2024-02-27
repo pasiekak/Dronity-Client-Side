@@ -11,7 +11,7 @@ import {useOutletContext} from "react-router-dom";
 const OperatorViewer = () => {
     const {pagination} = useOutletContext();
     return (
-        <div className="operator-viewer">
+        <div className="content operator-viewer">
 
             <div className="top">
                 <h1>Dostępni operatorzy({pagination.count})</h1>

@@ -1,4 +1,5 @@
 import AddImageForm from "./components/AddImageForm";
+import './styles/add-image.css';
 
 const AddImage = ({operatorID, setReloadGallery}) => {
     return (

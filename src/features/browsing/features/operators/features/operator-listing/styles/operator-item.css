@@ -13,6 +13,10 @@
     cursor: pointer;
 }
 
+.operators-outlet .operator-item .column {
+    display: none;
+}
+
 .operators-outlet .operator-item:hover {
     background-color: var(--pallete-color-5-brighter);
 }
