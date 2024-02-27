@@ -1,9 +1,9 @@
 import ApplicationsForCommission from "../../features/menaging_applications/ApplicationsForCommission";
 
-const ContractorDetails = ({contractor, applications, setCommission}) => {
+const ContractorDetails = ({contractor, applications, setApplications, setCommission}) => {
     return (
         <div className="contractor">
-            {contractor && <table>
+            {contractor && <table className="big-screen">
                 <caption className="title">Dane wykonawcy zlecenia</caption>
                 <thead>
                 <tr>
@@ -24,11 +24,20 @@ const ContractorDetails = ({contractor, applications, setCommission}) => {
                 </tr>
                 </tbody>
             </table>}
-            {!contractor && (applications === null ?
+            {contractor && <div className="small-screen">
+                <span className="title">Dane wykonawcy zlecenia</span>
+                <span>{contractor?.firstName}</span>
+                <span>{contractor?.lastName}</span>
+                <span>{contractor?.email}</span>
+                <span>{contractor?.phone}</span>
+                <span>{contractor?.license}</span>
+            </div>}
+            {(!contractor && !applications?.considerable?.some(application => application?.accepted === null)) ?
                 <span>
-                    Zlecenie nie posiada przydzielonego operatora oraz jeszcze żaden operator nie zgłosił się do jego wypełnienia.
+                    Zlecenie nie posiada przydzielonego operatora oraz brakuje nowych zgłoszeń.
 
-                </span> : <ApplicationsForCommission applications={applications} setCommission={setCommission}/>)}
+                </span> : <ApplicationsForCommission applications={applications} setApplications={setApplications}
+                                                     setCommission={setCommission}/>}
         </div>
     );
 };

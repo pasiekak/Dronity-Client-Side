@@ -16,7 +16,11 @@ import AddCommission from "../account/features/content/features/adding_commissio
 import CommissionViewer from "../browsing/features/commissions/CommissionViewer";
 import CommissionPage from "../browsing/features/commissions/features/commission-page/CommissionPage";
 import CommissionOutlet from "../browsing/features/commissions/CommissionOutlet";
+import OperatorOutlet from "../browsing/features/operators/OperatorOutlet";
 import OperatorViewer from "../browsing/features/operators/OperatorViewer";
+import OperatorApplications from "../account/features/content/features/applications/OperatorApplications";
+import OperatorPage from "../browsing/features/operators/features/operator-page/OperatorPage";
+import AccountImages from "../account/features/content/features/images/AccountImages";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -37,8 +41,29 @@ const router = createBrowserRouter(
                 <Route path={"settings"} element={<AccountSettings/>}/>
                 <Route path={"personal"} element={<AccountPersonal/>}/>
                 <Route path={"commissions"} element={<AccountCommissions/>}/>
-                <Route path={"administrator"} element={<AccountAdmin/>}/>
-                <Route path={"add_commission"} element={<AddCommission/>}/>
+                <Route path={"administrator"}
+                       element={
+                           <ProtectedRoute accessRoles={['administrator']}>
+                               <AccountAdmin/>
+                           </ProtectedRoute>}/>
+
+                <Route path={"add_commission"} element={
+                    <ProtectedRoute accessRoles={['client']} redirectPath={"/account"}>
+                        <AddCommission/>
+                    </ProtectedRoute>
+                }/>
+
+                <Route path={"applications"} element={
+                    <ProtectedRoute accessRoles={['operator']} redirectPath={"/account"}>
+                        <OperatorApplications/>
+                    </ProtectedRoute>
+                }/>
+
+                <Route path={"images"} element={
+                    <ProtectedRoute accessRoles={['operator']} redirectPath={"/account"}>
+                        <AccountImages/>
+                    </ProtectedRoute>
+                }/>
             </Route>
             <Route path="/commission-viewer" element={
                 <ProtectedRoute accessRoles={['administrator', 'operator']}>
@@ -50,10 +75,11 @@ const router = createBrowserRouter(
             </Route>
             <Route path="/operator-viewer" element={
                 <ProtectedRoute accessRoles={['administrator', 'client']}>
-                    <OperatorViewer/>
+                    <OperatorOutlet/>
                 </ProtectedRoute>
             }>
-
+                <Route path={""} element={<OperatorViewer/>}/>
+                <Route path={"operator/:id"} element={<OperatorPage/>}/>
             </Route>
         </Route>,
     ),

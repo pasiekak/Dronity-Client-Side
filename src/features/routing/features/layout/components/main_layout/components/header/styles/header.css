@@ -1,14 +1,18 @@
-.header {
+header {
     display: flex;
     justify-content: space-between;
     padding: 1rem var(--scrollbar-width) 0 1rem;
 }
 
-.header .logo {
+header .logo {
     height: 5rem;
 }
 
-.header nav {
+header .menu, header .menu.open {
+    padding-inline: 1rem;
+}
+
+header nav {
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -17,7 +21,13 @@
 }
 
 @media (max-width: 767px) {
-    .header nav {
+    header nav {
         width: 100%;
+    }
+    .logo-link {
+        display: none;
+    }
+    header .menu {
+        background: var(--pallete-color-1);
     }
 }

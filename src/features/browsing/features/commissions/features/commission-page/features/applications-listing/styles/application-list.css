@@ -1,0 +1,29 @@
+.commission-page .application-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline: 1rem;
+    background-color: var(--pallete-color-5);
+    padding-bottom: 1rem;
+}
+
+.commission-page .application-list h2 {
+    text-align: center;
+}
+
+.commission-page .application-list .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commission-page .application-list .info .left {
+    font-weight: bold;
+}
+
+.commission-page .application-list .columns {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}

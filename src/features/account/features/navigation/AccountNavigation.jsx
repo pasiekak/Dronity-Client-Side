@@ -24,6 +24,10 @@ const AccountNavigation = ({userDetails}) => {
             updateSelectedTab(3);
         } else if (pathname.includes("/account/add_commission")) {
             updateSelectedTab(4);
+        } else if (pathname.includes("/account/applications")) {
+            updateSelectedTab(5);
+        } else if (pathname.includes("/account/images")) {
+            updateSelectedTab(6);
         } else if (pathname.includes("/account")) {
             updateSelectedTab(1);
         }

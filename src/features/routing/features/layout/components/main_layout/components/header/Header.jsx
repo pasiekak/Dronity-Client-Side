@@ -23,31 +23,29 @@ const Header = () => {
 
     if (user) {
         return (
-            <div className="header">
-                <Link to="/">
+            <header>
+                <Link to="/" className="logo-link">
                     <LogoSVG className="logo"/>
                 </Link>
                 <nav>
                     <Link to="/">Strona główna</Link>
-                    <Link to="/about">O nas</Link>
                     {user.Role.name === 'operator' && <Link to="/commission-viewer">Przeglądaj zlecenia</Link>}
                     {user.Role.name === 'client' && <Link to="/operator-viewer">Przeglądaj operatorów</Link>}
                     <Dropdown trigger="Konto" itemList={dropdownItems}/>
                 </nav>
-            </div>
+            </header>
         );
     } else {
         return (
-            <div className="header">
-                <Link to="/">
+            <header>
+                <Link to="/" className="logo-link">
                     <LogoSVG className="logo"/>
                 </Link>
                 <nav>
                     <Link to="/">Strona główna</Link>
-                    <Link to="/about">O nas</Link>
                     <Link to="/auth/login">Zaloguj się</Link>
                 </nav>
-            </div>
+            </header>
         );
     }
 };

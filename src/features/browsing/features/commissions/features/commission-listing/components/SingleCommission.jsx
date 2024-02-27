@@ -14,10 +14,15 @@ const SingleCommission = ({commission, index}) => {
 
 
     return (
-        <div className="single-commission" onClick={() => navigate(`/commission-viewer/commission/${commission.id}`)}>
+        <div className="single-commission"
+             onClick={() => navigate(`/commission-viewer/commission/${commission.id}`, {replace: true})}>
+            <span className="column">Tytuł:</span>
             <span className="title">{commission.title}</span>
+            <span className="column">Data:</span>
             <span className="start_date">{new Date(commission.start_date).toLocaleDateString()}</span>
+            <span className="column">Miasto:</span>
             <span className="city">{commission.city}</span>
+            <span className="column">Zapłata:</span>
             <span className="suggested_payment">{commission.suggested_payment.toFixed(2)} zł</span>
             <div className={innerClass} style={{animationDelay: `${100 * index}ms`}}>
 

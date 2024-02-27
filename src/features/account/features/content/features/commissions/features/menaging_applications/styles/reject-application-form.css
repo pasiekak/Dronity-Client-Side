@@ -1,0 +1,21 @@
+.account-commissions .reject-application-form .field, .account-commissions .reject-application-form .info {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 80%
+
+}
+
+.account-commissions .reject-application-form .field.type {
+    grid-template-rows: 26px 40px;
+
+}
+
+.account-commissions .reject-application-form .field.comment {
+    grid-template-rows: 26px 6rem;
+}
+
+.account-commissions .reject-application-form .field.comment textarea {
+    text-align: left;
+    resize: none;
+}

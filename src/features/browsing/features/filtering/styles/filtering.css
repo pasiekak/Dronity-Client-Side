@@ -1,0 +1,36 @@
+.commission-viewer .filtering .dropdown .menu {
+    background-color: var(--pallete-color-2);
+    border-radius: 5px;
+}
+
+.commission-viewer .filtering .filtering-form {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.commission-viewer .filtering .filtering-form .filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.commission-viewer .filtering .filtering-form .dates,
+.commission-viewer .filtering .filtering-form .payments,
+.commission-viewer .filtering .filtering-form .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.commission-viewer .filtering .filtering-form .dates input,
+.commission-viewer .filtering .filtering-form .payments input {
+    flex: 1;
+}
+
+.commission-viewer .filtering .filtering-form .buttons {
+    justify-content: space-between;
+}

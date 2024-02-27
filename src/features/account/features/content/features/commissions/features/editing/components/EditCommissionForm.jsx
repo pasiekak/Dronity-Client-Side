@@ -20,16 +20,22 @@ const EditCommissionForm = ({hideForm, details, set}) => {
         defaultValues: {
             title, description, city, suggested_payment,
             start_date: formatDate(start_date),
-            end_date: formatDate(end_date)
+            end_date: formatDate(end_date),
+            status: details.status.id
         },
         resolver: yupResolver(schemas.others.commission_add_or_edit)
     })
-
     const onSubmit = (data) => {
         ServerCommunicator.handleRequest('put', `/api/commissions/${id}`, data).then(res => {
             if (res.success) {
+                console.log(res.data.newCommission)
                 set(prevCommission => {
-                    return {...prevCommission, details: {...prevCommission.details, ...data}}
+                    return {
+                        ...prevCommission,
+                        details: {
+                            ...res.data.newCommission,
+                        }
+                    }
                 })
                 setSuccess(true);
                 setApiMessage(res.message);
@@ -72,8 +78,16 @@ const EditCommissionForm = ({hideForm, details, set}) => {
                 <label htmlFor={'suggested_payment'}>Proponowana zapłata</label>
                 <input type={'number'} step={0.01} {...register('suggested_payment')}/>
                 <span className={'error'}>{errors?.suggested_payment?.message}</span>
-                <h2 className={`${success ? 'success-message ' : ' '}api-message`}>{apiMessage}</h2>
             </div>
+            {details.status.id >= 3 &&
+                <div className={'field'}>
+                    <label htmlFor={'status'}>Status zgłoszenia</label>
+                    <select {...register('status')}>
+                        <option value={3}>Zatwierdzone</option>
+                        <option value={4}>Wykonane</option>
+                    </select>
+                    <h2 className={`${success ? 'success-message ' : ' '}api-message`}>{apiMessage}</h2>
+                </div>}
 
 
             <div className={'buttons'}>

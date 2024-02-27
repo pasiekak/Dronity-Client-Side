@@ -1,0 +1,69 @@
+.operator-page .operator-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    background: var(--pallete-color-2);
+    padding-block: 0.5rem;
+}
+
+.operator-page .operator-profile .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.operator-page .operator-profile .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.operator-page .operator-profile .right h3 {
+    text-align: center;
+}
+
+.operator-page .operator-profile .right .properties {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.operator-page .operator-profile .right .properties span:nth-of-type(even) {
+    font-style: italic;
+}
+
+.operator-page .operator-profile .left .name {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.operator-page .operator-profile .left .name::first-letter {
+    color: var(--pallete-color-4)
+}
+
+.operator-page .operator-profile .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operator-page .operator-profile .image-wrapper img {
+    height: 100%;
+    border-radius: 2rem;
+}
+
+@media (max-width: 767px) {
+    .operator-page .operator-profile {
+        display: flex;
+        flex-direction: column;
+    }
+    .operator-page .operator-profile .image-wrapper img {
+        height: 200px;
+    }
+}

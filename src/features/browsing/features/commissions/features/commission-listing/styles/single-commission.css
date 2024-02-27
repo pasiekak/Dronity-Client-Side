@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+.commission-list .single-commission .column {
+    display: none;
+}
+
 .commission-list .single-commission:hover {
     background-color: var(--pallete-color-5-brighter);
 }

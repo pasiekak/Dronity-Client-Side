@@ -1,0 +1,13 @@
+.account-images .add-image form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.account-images .add-image form label {
+    text-align: center;
+}
+
+.account-images .add-image form .buttons {
+    text-align: center;
+}

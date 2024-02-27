@@ -5,15 +5,15 @@ const ClientAccountNavigation = ({selected}) => {
         <nav className="client-account-navigation navigation">
             <Link to="/account/settings"
                   className={selected === 1 ? "selected" : ""}>
-                Ustawienia konta
+                Konto
             </Link>
             <Link to="/account/personal"
                   className={selected === 2 ? "selected" : ""}>
-                Ustawienia personalne
+                Dane
             </Link>
             <Link to="/account/commissions"
                   className={selected === 3 ? "selected" : ""}>
-                Twoje zlecenia
+                Zlecenia
             </Link>
             <Link to="/account/add_commission"
                   className={selected === 4 ? "selected" : ""}>

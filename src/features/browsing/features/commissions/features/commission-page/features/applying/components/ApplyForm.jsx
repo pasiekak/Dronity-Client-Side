@@ -2,7 +2,7 @@ import {useForm} from "react-hook-form";
 import {ServerCommunicator} from "../../../../../../../../../shared/services/ServerCommunicator";
 import {useState} from "react";
 
-const ApplyForm = ({suggestedPayment, id, setShowForm, setCommission}) => {
+const ApplyForm = ({suggestedPayment, id, setShowForm, setApplications, setHaveConsiderableApplication}) => {
     const [loading, setLoading] = useState(false);
     const {register, handleSubmit} = useForm({
         defaultValues: {
@@ -16,9 +16,11 @@ const ApplyForm = ({suggestedPayment, id, setShowForm, setCommission}) => {
             offered_payment: parseFloat(data.offered_payment).toFixed(2)
         }).then(res => {
             if (res.success) {
-                setCommission(prev => {
-                    return {...prev, applied: true}
+                console.log(res)
+                setApplications(prev => {
+                    return [...prev, res.data.application]
                 })
+                setHaveConsiderableApplication(true);
             }
         }).finally(() => {
             setLoading(false)

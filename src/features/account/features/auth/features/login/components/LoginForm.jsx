@@ -50,7 +50,7 @@ const LoginForm = () => {
                 disabled={formDisabled}
             />
             <p className="error">{errors.password?.message}</p>
-            <input type="submit" value="Zaloguj się" disabled={formDisabled}/>
+            <button type="submit" className="violet_button" disabled={formDisabled}>Zaloguj się</button>
         </form>
     );
 };

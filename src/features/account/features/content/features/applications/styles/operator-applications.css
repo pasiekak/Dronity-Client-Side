@@ -1,0 +1,20 @@
+.account .operator-applications {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account .operator-applications > .columns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(40px, min-content);
+    justify-items: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.account .operator-applications.loading .loader {
+    height: 64px;
+}

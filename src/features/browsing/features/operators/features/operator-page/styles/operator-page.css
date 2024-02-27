@@ -1,0 +1,14 @@
+.operator-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+}
+
+.operator-page .images {
+    padding: 1rem 10px;
+}
+
+.operator-page .images h2 {
+    text-align: center;
+}
